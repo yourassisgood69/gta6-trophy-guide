@@ -22,7 +22,7 @@ body { font-family: Arial, Helvetica, sans-serif; margin: 0; color: var(--ink); 
 .controls button, .import { font-size: 13px; padding: 7px 12px; border-radius: 6px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
 .controls label.import { color: #fff; }
 .import input { display: none; }
-.check input { width: 16px; height: 16px; }
+.check input { width: 24px; height: 24px; }
 .spoiler { font-weight: bold; color: var(--ink); }
 .detail { margin: 18px 28px 0; background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 10px; padding: 16px 20px; }
 .detail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
@@ -37,15 +37,20 @@ main { padding: 6px 28px 10px; }
 @media (max-width: 900px) { .list { grid-template-columns: 1fr; } }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; }
 .card:hover { border-color: var(--accent); }
+.card:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.card:focus { outline: 3px solid var(--accent); outline-offset: 2px; }
 .card.earned { background: #eef7f2; }
 .card h3 { margin: 4px 0; font-size: 16px; }
 .card .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.card input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+.card input { width: 24px; height: 24px; accent-color: var(--accent); cursor: pointer; flex: none; }
 .badge { font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; padding: 2px 8px; border-radius: 20px; color: #fff; }
 .badge.platinum { background: var(--plat); } .badge.gold { background: var(--gold); }
 .badge.silver { background: var(--silver); } .badge.bronze { background: var(--bronze); }
 .tag { font-size: 11px; padding: 2px 8px; border-radius: 20px; background: #eef1f4; color: var(--muted); }
 .tag.miss { background: var(--warn-bg); color: var(--warn); font-weight: bold; }
+.tag.unconfirmed { background: #fff3d6; color: #6b4e00; font-weight: bold; border: 1px solid #d9a400; }
+.unconfirmed-badge { background: #fff3d6; border: 2px solid #d9a400; color: #6b4e00; font-weight: bold; border-radius: 8px; padding: 8px 12px; }
+.empty-state { background: var(--card); border: 1px dashed var(--line); border-radius: 10px; padding: 16px 18px; color: var(--muted); font-size: 15px; }
 .tag.kind { background: var(--accent-soft); color: var(--accent); }
 .card .desc { margin: 6px 0; color: var(--muted); font-size: 14px; }
 .card .guide { margin: 6px 0 0; font-size: 14px; }

@@ -15,8 +15,8 @@
   </div>
   <div class="progress-card" id="progress-card">
     <div class="big" id="progress-big">0 / 55</div>
-    <div class="bar"><div class="fill" id="progress-fill"></div></div>
-    <p id="progress-text">0% earned &middot; 0 platinum &middot; 0 gold &middot; 0 silver &middot; 0 bronze</p>
+    <div class="bar" id="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0"><div class="fill" id="progress-fill"></div></div>
+    <p id="progress-text" aria-live="polite">0% earned &middot; 0 platinum &middot; 0 gold &middot; 0 silver &middot; 0 bronze</p>
   </div>
 </header>
 
@@ -45,12 +45,13 @@
   <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
 </nav>
 
-<section id="detail" class="detail" hidden>
+<section id="detail" class="detail" role="dialog" aria-modal="false" aria-labelledby="detail-name" hidden>
   <div class="detail-head">
     <h2 id="detail-name"></h2>
     <button id="detail-close" type="button" aria-label="Close guide">✕</button>
   </div>
   <p id="detail-meta"></p>
+  <p id="detail-unconfirmed" class="unconfirmed-badge" hidden>Method unconfirmed — no published guide has confirmed how this trophy unlocks yet.</p>
   <p id="detail-desc" class="desc"></p>
   <p id="detail-guide"></p>
   <p id="detail-sources" class="sources"></p>
@@ -58,6 +59,7 @@
 
 <main>
   <p id="count-line" class="count-line"></p>
+  <p id="empty-state" class="empty-state" hidden></p>
   <ul id="list" class="list"></ul>
 </main>
 
