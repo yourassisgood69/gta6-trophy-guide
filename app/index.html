@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 Trophy Guide and Tracker — all 55 trophies, roadmap to platinum</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <p class="kicker">GRAND THEFT AUTO VI &middot; PLAYSTATION 5 &middot; FAN-MADE GUIDE</p>
+    <h1>GTA 6 Trophy Guide &amp; Tracker</h1>
+    <p class="sub">All 55 official trophies with a cited guide for each, a roadmap to the platinum, and the missables flagged. Works offline — your progress stays in this browser.</p>
+  </div>
+  <div class="progress-card" id="progress-card">
+    <div class="big" id="progress-big">0 / 55</div>
+    <div class="bar"><div class="fill" id="progress-fill"></div></div>
+    <p id="progress-text">0% earned &middot; 0 platinum &middot; 0 gold &middot; 0 silver &middot; 0 bronze</p>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Tracker controls">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+  <label>Grade <select id="grade">
+    <option value="all">All grades</option>
+    <option value="platinum">Platinum</option>
+    <option value="gold">Gold</option>
+    <option value="silver">Silver</option>
+    <option value="bronze">Bronze</option>
+  </select></label>
+  <label>Kind <select id="kind">
+    <option value="all">All kinds</option>
+    <option value="story">Story</option>
+    <option value="collectible">Collectibles</option>
+    <option value="activity">Activities</option>
+    <option value="robbery">Robberies</option>
+    <option value="money">Money</option>
+    <option value="exploration">Exploration</option>
+  </select></label>
+  <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+  <label class="check"><input id="hide-earned" type="checkbox"> Hide earned</label>
+  <label class="check spoiler"><input id="spoiler" type="checkbox" checked> Hide story spoilers</label>
+  <button id="export" type="button">Export progress</button>
+  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+</nav>
+
+<section id="detail" class="detail" hidden>
+  <div class="detail-head">
+    <h2 id="detail-name"></h2>
+    <button id="detail-close" type="button" aria-label="Close guide">✕</button>
+  </div>
+  <p id="detail-meta"></p>
+  <p id="detail-desc" class="desc"></p>
+  <p id="detail-guide"></p>
+  <p id="detail-sources" class="sources"></p>
+</section>
+
+<main>
+  <p id="count-line" class="count-line"></p>
+  <ul id="list" class="list"></ul>
+</main>
+
+<section id="roadmap" class="roadmap">
+  <h2>Roadmap to the platinum — about 200 hours, difficulty 4/10</h2>
+  <p class="roadmap-intro">One playthrough, no online trophies, none glitched, no difficulty settings, no mission replay. Free-roam continues after the story. Cheats disable trophies <strong>and</strong> saving — never use them on a trophy run. Keep a manual save at the start and end of each chapter (15 manual slots + 1 autosave).</p>
+  <ol id="roadmap-steps" class="steps"></ol>
+  <div id="missable" class="missable-box">
+    <h3>⚠ The one possibly missable trophy: Positive Mental Attitude</h3>
+    <p>Meditate at all 18 spots across 10 locations — and do the first meditation in <strong>Chapter 1</strong>, because it may be the game's only missable trophy. After the Chapter 1 mission <em>Down to Earth</em>, talk to Lucia in the kitchen in the morning (she says she is going to meditate), follow her to the balcony and choose <strong>Accept</strong>. Meditating as both Jason and Lucia counts twice per spot; the last meditation needs both characters together (after Chapter 2, <em>Coffee Break</em>). Track it at Progress → Collections → Exploration → Meditations. Sources: PowerPyx trophy guide and GTABase.</p>
+  </div>
+  <h3>Tips that save a run</h3>
+  <ul id="tips" class="tips"></ul>
+</section>
+
+<section id="sources" class="sources-section">
+  <h2>Sources</h2>
+  <p>Every guide above is written in our own words from the facts in these sources — never copied from them. The official trophy names, descriptions and grades are shown exactly as PlayStation publishes them (cross-checked on Exophase and PSNProfiles, 18 Nov 2026).</p>
+  <ul id="source-list"></ul>
+</section>
+
+<footer>
+  <p>Fan-made guide, not affiliated with Rockstar Games. No Rockstar logo or official artwork is used anywhere in this guide. All guide text is original; facts are cited per trophy.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

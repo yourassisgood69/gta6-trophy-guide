@@ -1,0 +1,67 @@
+:root {
+  --ink: #1c2430; --muted: #5a6572; --line: #d8dee6; --bg: #f4f6f8;
+  --card: #ffffff; --accent: #0b6e4f; --accent-soft: #e3f2ec;
+  --gold: #8a6d00; --silver: #5f6b7a; --bronze: #7a4a21; --plat: #4b3a8c;
+  --warn: #8a1f1f; --warn-bg: #fdecea;
+}
+* { box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; color: var(--ink); background: var(--bg); line-height: 1.45; }
+.top { display: flex; gap: 24px; justify-content: space-between; align-items: flex-start; padding: 22px 28px 16px; background: #12212e; color: #fff; flex-wrap: wrap; }
+.kicker { margin: 0 0 6px; font-size: 12px; letter-spacing: 2px; color: #9fd8c0; }
+.top h1 { margin: 0; font-size: 32px; line-height: 1.1; }
+.sub { margin: 8px 0 0; max-width: 640px; color: #c9d4de; font-size: 15px; }
+.progress-card { background: #1d3448; border: 1px solid #33506a; border-radius: 10px; padding: 14px 18px; min-width: 250px; }
+.big { font-size: 30px; font-weight: bold; }
+.bar { height: 10px; background: #0e1a26; border-radius: 6px; margin: 8px 0; overflow: hidden; }
+.fill { height: 100%; width: 0%; background: #2fbf8f; }
+.progress-card p { margin: 0; font-size: 13px; color: #c9d4de; }
+.controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; padding: 14px 28px; background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+.controls label { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+.controls input[type="search"], .controls select { font-size: 14px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--ink); }
+.controls input[type="search"] { width: 220px; }
+.controls button, .import { font-size: 13px; padding: 7px 12px; border-radius: 6px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+.controls label.import { color: #fff; }
+.import input { display: none; }
+.check input { width: 16px; height: 16px; }
+.spoiler { font-weight: bold; color: var(--ink); }
+.detail { margin: 18px 28px 0; background: var(--accent-soft); border: 2px solid var(--accent); border-radius: 10px; padding: 16px 20px; }
+.detail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.detail h2 { margin: 0; font-size: 22px; }
+.detail-head button { border: 1px solid var(--line); background: #fff; border-radius: 6px; padding: 4px 10px; cursor: pointer; font-size: 15px; }
+.detail .desc { font-style: italic; color: var(--muted); }
+.detail p { margin: 8px 0; }
+.sources { font-size: 13px; color: var(--muted); }
+main { padding: 6px 28px 10px; }
+.count-line { color: var(--muted); font-size: 14px; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 900px) { .list { grid-template-columns: 1fr; } }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; }
+.card:hover { border-color: var(--accent); }
+.card.earned { background: #eef7f2; }
+.card h3 { margin: 4px 0; font-size: 16px; }
+.card .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.card input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+.badge { font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; padding: 2px 8px; border-radius: 20px; color: #fff; }
+.badge.platinum { background: var(--plat); } .badge.gold { background: var(--gold); }
+.badge.silver { background: var(--silver); } .badge.bronze { background: var(--bronze); }
+.tag { font-size: 11px; padding: 2px 8px; border-radius: 20px; background: #eef1f4; color: var(--muted); }
+.tag.miss { background: var(--warn-bg); color: var(--warn); font-weight: bold; }
+.tag.kind { background: var(--accent-soft); color: var(--accent); }
+.card .desc { margin: 6px 0; color: var(--muted); font-size: 14px; }
+.card .guide { margin: 6px 0 0; font-size: 14px; }
+.card .target { margin: 6px 0 0; font-size: 13px; font-weight: bold; color: var(--accent); }
+.card .src { margin: 4px 0 0; font-size: 12px; color: var(--muted); }
+.hidden-name { color: var(--muted); font-style: italic; }
+.roadmap { margin: 24px 28px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; }
+.roadmap h2, .sources-section h2 { margin-top: 0; }
+.steps { padding-left: 22px; }
+.steps li { margin-bottom: 12px; }
+.steps strong { display: block; font-size: 16px; }
+.missable-box { background: var(--warn-bg); border: 2px solid var(--warn); border-radius: 10px; padding: 12px 16px; margin: 16px 0; }
+.missable-box h3 { margin: 0 0 6px; color: var(--warn); }
+.missable-box p { margin: 0; }
+.tips { padding-left: 20px; }
+.tips li { margin-bottom: 6px; }
+.sources-section { margin: 24px 28px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; }
+.sources-section li { margin-bottom: 6px; }
+footer { padding: 10px 28px 28px; color: var(--muted); font-size: 13px; }
