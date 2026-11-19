@@ -5,6 +5,9 @@
 // outside the grader with MAKEFUN_OUTPUT_DIR set, e.g.:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 // The program is deterministic: same input files, same output bytes.
+// Round 2 note: the dossier must stay byte-identical across the two runs,
+// so this program writes nothing but the copied app/ and screenshots/ plus
+// the dossier itself — no timestamps, no run-dependent data.
 import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -32,4 +35,4 @@ const dossier = buildDossier(outputDir, {
   app_max_bytes: 50331648,
 });
 writeFileSync(join(outputDir, 'dossier.json'), dossier);
-console.log(`dossier written to ${join(outputDir, 'dossier.json')}`);
+console.log(`dossier written to ${join(outputDir, 'dossier.json')} (${Buffer.byteLength(dossier, 'utf8')} bytes)`);

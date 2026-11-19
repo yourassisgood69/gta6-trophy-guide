@@ -14,6 +14,15 @@ node serve.ts
 
 Then open http://localhost:8080 — no build step, no network needed. The app is plain static files under `app/` (`index.html`, `style.css`, `app.js`, `data/trophies.json`).
 
+## Round 2
+
+Round 2 rebuilds the guide from the audit review, keeping round 1's data and structure:
+
+- **U1 — story guides rewritten:** the ~12 story trophies whose guides were near-identical boilerplate (Just Like Paradise, Paradise Lost, T\*\*s Ass Drug Money, Vice City, Baby!, Top Of The World, Ma, You Gotta Know When to Get Off, Trust, Break the Bank, Family Matters, DWNFALL, Hi-Jacked, Snow Storm) now each have a distinct 2–4 sentence guide with chapter context, what unlocks around them, and when to save — names, descriptions and grades unchanged.
+- **U2 — unconfirmed methods flagged:** In The Beginning…, Bad Luck, I Guess, The Truth Is Out There and Ten Pin now carry a visible "Method unconfirmed" badge on the card and in the detail panel. The "check back for an update" wording is gone: this is a static offline bundle with no update mechanism, so the guides say so plainly.
+- **U3 — keyboard access:** trophy cards are focusable and open with Enter/Space, and ticking a trophy updates only that card in place, so focus stays put instead of dropping to the page body.
+- Also fixed: a bad `#grade-<x>` deep link now explains that no trophies match, the detail panel returns focus to the card that opened it (Escape closes it), the progress bar is a real `progressbar` with a live region, and checkboxes are 24px (WCAG 2.2 AA minimum).
+
 ## What is inside
 
 - `app/` — the guide itself. `app/data/trophies.json` holds all 55 trophies (official name, description, grade, hidden flag, kind, missable flag, target counts), the 3-step roadmap, tips and sources.

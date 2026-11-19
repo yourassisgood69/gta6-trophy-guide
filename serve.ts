@@ -24,6 +24,9 @@ const mimeTypes = {
   '.jpeg': 'image/jpeg',
 };
 
+// Round 2 note: the traversal guard below is load-bearing — the app must
+// never serve a file outside app/, so keep the resolve + prefix check in
+// place even if the routing above changes.
 createServer((request, response) => {
   let path = '/';
   try {
@@ -54,5 +57,5 @@ createServer((request, response) => {
   });
   createReadStream(file).pipe(response);
 }).listen(port, '127.0.0.1', () => {
-  console.log(`GTA 6 trophy guide is on http://localhost:${port}`);
+  console.log(`GTA 6 trophy guide is on http://localhost:${port} (serving ${appRoot})`);
 });
